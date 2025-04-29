@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button/button";
+import { ProductCard } from "@/components/ui/product-card";
 import { SettingsIcon } from "lucide-react";
 import Image from "next/image";
 
