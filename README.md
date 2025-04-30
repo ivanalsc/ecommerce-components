@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📦 Ecommerce UI Components
+Reusable, accessible, and production-ready UI components for modern e-commerce apps — built with Next.js, shadcn/ui, Zustand, and Tailwind CSS.
 
-## Getting Started
+✨ Features
+♿ Accessible components
 
-First, run the development server:
+🛒 Fully functional MiniCart (add/remove/clear)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+📦 Zustand store integration
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📱 Responsive layout
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+💅 ShadCN + Tailwind styling
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📖 Documented in Storybook
 
-## Learn More
+📚 Components included
+Button (variant, loading, icon)
 
-To learn more about Next.js, take a look at the following resources:
+Badge (status labels)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ProductCard (image, stock state, add to cart)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+ProductGrid (responsive layout)
 
-## Deploy on Vercel
+Skeletons (loading states)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+MiniCart (with Zustand)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Drawer implementation
+
+🧪 Getting Started
+bash
+Copiar
+Editar
+git clone https://github.com/tuusuario/ecommerce-ui-components
+cd ecommerce-ui-components
+npm install
+npm run dev     # Run Next.js
+npm run storybook  # Open Storybook
+
+---
+
+### 📸 UI Preview
+
+| Product Card | MiniCart (opened) |
+|--------------|------------------|
+| ![ProductCard](./public/screenshots/product-card.png) | ![MiniCart](./public/screenshots/minicart.png) |
+
+| Product Grid | MiniCart Empty (Demo Items) |
+|--------------|----------------------------|
+| ![ProductGrid](./public/screenshots/product-grid.png) | 
+
+
+
+🛠 Tech Stack
+Next.js
+
+TypeScript
+
+Tailwind CSS
+
+shadcn/ui
+
+Zustand
+
+Storybook
+
+💻 Use case
+Ideal for portfolios, UI kits, or as a foundation for full e-commerce projects.
