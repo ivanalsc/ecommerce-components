@@ -1,11 +1,13 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button/button"
+import { Badge } from "../badge/badge"
+import { useCartStore } from "@/lib/stores/cart"
 
 interface ProductCardProps {
   imageUrl: string
   imageAlt: string
   title: string
-  price: string
+  price: string 
   isOutOfStock?: boolean
 }
 
@@ -16,6 +18,20 @@ export function ProductCard({
   price,
   isOutOfStock = false,
 }: ProductCardProps) {
+  const addItem = useCartStore((state) => state.addItem)
+
+  const handleAddToCart = () => {
+    const numericPrice = parseFloat(price.replace("$", ""))
+
+    addItem({
+      id: Math.floor(Math.random() * 100000), // ID simulado, idealmente viene del producto real
+      title,
+      price: numericPrice,
+      quantity: 1,
+      imageUrl,
+    })
+  }
+
   return (
     <div className="group relative w-[300px] rounded-lg border p-4 shadow-sm transition hover:shadow-md">
       <div className="relative w-full overflow-hidden rounded-md">
@@ -27,9 +43,9 @@ export function ProductCard({
           className="object-cover"
         />
         {isOutOfStock && (
-          <div className="absolute top-2 left-2 rounded-full bg-red-500 px-2 py-1 text-xs font-semibold text-white">
+          <Badge variant="destructive">
             Out of Stock
-          </div>
+          </Badge>
         )}
       </div>
 
@@ -41,6 +57,7 @@ export function ProductCard({
           variant="default"
           disabled={isOutOfStock}
           className="w-full mt-2"
+          onClick={handleAddToCart}
         >
           {isOutOfStock ? "Unavailable" : "Add to Cart"}
         </Button>
