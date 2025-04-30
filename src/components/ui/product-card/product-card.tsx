@@ -2,12 +2,13 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button/button"
 import { Badge } from "../badge/badge"
 import { useCartStore } from "@/lib/stores/cart"
+import { toast } from "sonner"
 
 interface ProductCardProps {
   imageUrl: string
   imageAlt: string
   title: string
-  price: string 
+  price: string // ej: "$79.99"
   isOutOfStock?: boolean
 }
 
@@ -24,11 +25,18 @@ export function ProductCard({
     const numericPrice = parseFloat(price.replace("$", ""))
 
     addItem({
-      id: Math.floor(Math.random() * 100000), // ID simulado, idealmente viene del producto real
+      id: Math.floor(Math.random() * 100000), 
       title,
       price: numericPrice,
       quantity: 1,
       imageUrl,
+    })
+
+    toast.success("Added to cart", {
+      description: title,
+      icon: "🛒",
+      className: "bg-neutral-800 text-black border border-neutral-700",
+      descriptionClassName: "text-black-300"
     })
   }
 

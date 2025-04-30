@@ -38,9 +38,9 @@ export function MiniCart() {
   ]
 
   const visibleItems = isEmpty ? fallbackItems : items
-  const subtotalFromStore = useCartStore((state) => state.getSubtotal())
-  const subtotal = isEmpty ? "$199.97" : subtotalFromStore
-  
+const subtotalFromStore = useCartStore((state) => state.getSubtotal())
+const subtotal = isEmpty ? "$199.97" : subtotalFromStore
+
 
   return (
     <Drawer direction="right">
