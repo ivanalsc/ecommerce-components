@@ -20,6 +20,8 @@ Reusable, accessible, and production-ready UI components for modern e-commerce a
 - **Skeletons** (loading states)
 - **MiniCart** (with Zustand)
 - **Drawer** implementation
+- **LoadMore** (progressive loading with button)
+- **SearchBar** (real-time search with results using ProductCard)
 
 ## 🧪 Getting Started
 
@@ -42,6 +44,10 @@ npm run storybook  # Open Storybook
 | Product Grid |
 |--------------|
 | ![ProductGrid](./public/screenshots/product-grid.png) |
+
+| Search Bar |
+|--------------|
+| ![SearchBar](./public/screenshots/search-bar.png) |
 
 ## 🛠 Tech Stack
 
