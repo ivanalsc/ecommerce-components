@@ -5,6 +5,27 @@ const meta: Meta<typeof SearchBar> = {
   title: "Components/SearchBar",
   component: SearchBar,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+  ### SearchBar Component
+  
+  The **SearchBar** provides a real-time search interface to filter a list of products based on title.
+  
+  It displays matching results using \`ProductCard\` components.
+  
+  Props:
+  
+  - \`products\`: An array of products to filter.
+  - \`placeholder\`: Optional input placeholder text.
+  
+  Includes basic accessibility, keyboard support, and a fallback "No results" message.
+        `,
+      },
+    },
+  },
+  
 }
 
 export default meta

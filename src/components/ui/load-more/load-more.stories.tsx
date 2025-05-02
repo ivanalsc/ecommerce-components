@@ -7,6 +7,26 @@ const meta: Meta<typeof LoadMore> = {
   title: "Components/LoadMore",
   component: LoadMore,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+  ### LoadMore Component
+  
+  The **LoadMore** component is used to progressively load more content — typically in product grids or feed layouts.
+  
+  It accepts three props:
+  
+  - \`hasMore\`: Boolean that defines if there’s more content to load.
+  - \`isLoading\`: Boolean that disables the button and shows a spinner.
+  - \`onLoadMore\`: Callback triggered when the user clicks the button.
+  
+  Accessible, keyboard-navigable, and consistent with the UI library.
+        `,
+      },
+    },
+  },
+  
 }
 
 export default meta
